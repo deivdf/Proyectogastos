@@ -2,6 +2,7 @@ import React from 'react'
 import Presupuesto from './NuevoPresupuesto.jsx'
 import ControlPresupuesto from './ControlPresupuesto.jsx'
 function header({
+  gastos,
   presupuesto,
   setPresupuesto,
   isValidoPresupuesto,
@@ -14,7 +15,8 @@ function header({
       {
         isValidoPresupuesto ? (
           <ControlPresupuesto
-          presupuesto={presupuesto}
+            gastos={gastos}
+            presupuesto={presupuesto}
           />
         ):(
           <Presupuesto

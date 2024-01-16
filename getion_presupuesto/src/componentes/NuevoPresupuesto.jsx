@@ -12,6 +12,9 @@ function NuevoPresupuesto({
     e.preventDefault()
     if ( !(presupuesto) ||(presupuesto) < 0) {
       setMensaje('El presupuesto no es valido')
+      setTimeout(() => {
+        setMensaje('')
+      }, 5000);
       return
     }
     setMensaje('')
